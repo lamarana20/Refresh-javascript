@@ -35,3 +35,20 @@ function insertBefore() {
 insertBefore()
 
 
+
+    // Challenge
+const insertAfter= (newEl ,exiEl) => {
+    exiEl.parentElement.insertBefore(newEl,exiEl.nextSibling)
+}
+
+
+    // New element to insert
+const li = document.createElement('li');
+li.textContent = 'Insert Me After!';
+
+// Existing element to insert after
+const firstItem = document.querySelector('li:nth-child(3)');
+
+// Our custom function
+insertAfter(li, firstItem);
+
